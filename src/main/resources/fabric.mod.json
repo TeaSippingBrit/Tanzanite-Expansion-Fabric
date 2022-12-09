@@ -13,8 +13,8 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "MIT License",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/tanzaniteexpansion/mod-icon.png",
 
   "environment": "*",
   "entrypoints": {
