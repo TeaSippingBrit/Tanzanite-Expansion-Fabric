@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "tanzaniteexpansion:block/polydenum_stage5"
+  }
+}

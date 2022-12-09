@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.tanzanite.block.ModBlocks;
 import net.fabricmc.tanzanite.fluid.ModFluids;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
@@ -11,6 +12,7 @@ import net.minecraft.util.Identifier;
 public class TanzaniteExpansionClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POLYDENUM_CROP, RenderLayer.getCutout());
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_LIQUID_TANZANITE, ModFluids.FLOWING_LIQUID_TANZANITE,
                 new SimpleFluidRenderHandler(
                         new Identifier("minecraft:block/water_still"),

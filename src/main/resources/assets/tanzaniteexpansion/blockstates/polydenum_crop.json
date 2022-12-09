@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "age=0": { "model": "tanzaniteexpansion:block/polydenum_stage0" },
+    "age=1": { "model": "tanzaniteexpansion:block/polydenum_stage1" },
+    "age=2": { "model": "tanzaniteexpansion:block/polydenum_stage2" },
+    "age=3": { "model": "tanzaniteexpansion:block/polydenum_stage3" },
+    "age=4": { "model": "tanzaniteexpansion:block/polydenum_stage4" },
+    "age=5": { "model": "tanzaniteexpansion:block/polydenum_stage5" },
+    "age=6": { "model": "tanzaniteexpansion:block/polydenum_stage6" }
+  }
+}
