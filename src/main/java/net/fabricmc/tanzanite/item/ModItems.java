@@ -11,7 +11,8 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
     public static final Item TANZANITE = registerItem("tanzanite",
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
-
+    public static final Item POLYDENUM_SHARD = registerItem("polydenum_shard",
+            new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(TanzaniteExpansion.MOD_ID, name), item);
     }    

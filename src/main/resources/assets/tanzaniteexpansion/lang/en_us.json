@@ -1,10 +1,13 @@
 {
     "item.tanzaniteexpansion.raw_tanzanite": "Raw Tanzanite",
     "item.tanzaniteexpansion.tanzanite": "Tanzanite",
+    "item.tanzaniteexpansion.polydenum_shard": "Polydenum Shard",
+    "item.tanzaniteexpansion.liquid_tanzanite_bucket": "Bucket of Liquid Tanzanite",
 
     "block.tanzaniteexpansion.tanzanite_block": "Block of Tanzanite",
     "block.tanzaniteexpansion.tanzanite_ore": "Tanzanite Ore",
     "block.tanzaniteexpansion.deepslate_tanzanite_ore": "Deepslate Tanzanite Ore",
+    "block.tanzaniteexpansion.polydenum_block": "Block of Polydenum",
 
     "itemGroup.tanzaniteexpansion.tanzanite": "Tanzanite Expansion"
 }

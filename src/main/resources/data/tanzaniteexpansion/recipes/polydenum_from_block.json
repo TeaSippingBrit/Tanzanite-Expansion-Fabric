@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tanzaniteexpansion:polydenum_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "tanzaniteexpansion:polydenum_shard"
+  }
+}

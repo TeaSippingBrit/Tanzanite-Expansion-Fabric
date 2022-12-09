@@ -26,7 +26,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tanzaniteexpansion:tanzanite",
+              "name": "tanzaniteexpansion:raw_tanzanite",
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",
