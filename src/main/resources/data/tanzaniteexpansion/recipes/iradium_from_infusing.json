@@ -1,0 +1,11 @@
+{
+  "type": "tanzaniteexpansion:chemical_infusing",
+  "ingredients": [
+    {
+      "item": "tanzaniteexpansion:tanzanite"
+    }
+  ],
+  "output": {
+    "item": "tanzaniteexpansion:iradium_crystal"
+  }
+}

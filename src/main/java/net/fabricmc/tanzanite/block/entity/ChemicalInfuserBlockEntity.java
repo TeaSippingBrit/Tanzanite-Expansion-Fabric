@@ -1,6 +1,7 @@
 package net.fabricmc.tanzanite.block.entity;
 
 import net.fabricmc.tanzanite.item.ModItems;
+import net.fabricmc.tanzanite.recipe.ChemicalInfuserRecipe;
 import net.fabricmc.tanzanite.screen.ChemicalInfuserScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -19,6 +20,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class ChemicalInfuserBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
@@ -111,10 +114,10 @@ public class ChemicalInfuserBlockEntity extends BlockEntity implements NamedScre
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
-
+        Optional<ChemicalInfuserRecipe> recipe = entity.getWorld().getRecipeManager().getFirstMatch(ChemicalInfuserRecipe.Type.INSTANCE, inventory, entity.getWorld());
         if(hasRecipe(entity)) {
             entity.removeStack(1,1);
-            entity.setStack((2), new ItemStack(ModItems.TANZANITE, entity.getStack(2).getCount() + 1));
+            entity.setStack((2), new ItemStack(recipe.get().getOutput().getItem(), entity.getStack(2).getCount() + 1));
             entity.resetProgress();
         }
     }
@@ -123,16 +126,17 @@ public class ChemicalInfuserBlockEntity extends BlockEntity implements NamedScre
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
-        boolean hasRawGemInFirstSlot = entity.getStack(1).getItem() == ModItems.RAW_TANZANITE;
+        Optional<ChemicalInfuserRecipe> match = entity.getWorld().getRecipeManager().getFirstMatch(ChemicalInfuserRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
-        return hasRawGemInFirstSlot && canInsertAmountIntoOutputSlot(inventory, 1) && canInsertItemIntoOutputSlot(inventory, ModItems.TANZANITE);
+        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
+                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput().getItem());
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
         return inventory.getStack(2).getItem() == output || inventory.getStack(2).isEmpty();
     }
 
-    private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory, int count) {
+    private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {
         return inventory.getStack(2).getMaxCount() > inventory.getStack(2).getCount();
     }
 

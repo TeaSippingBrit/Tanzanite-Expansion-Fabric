@@ -17,6 +17,8 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
     public static final Item POLYDENUM_SEEDS = registerItem("polydenum_seeds",
             new AliasedBlockItem(ModBlocks.POLYDENUM_CROP, new FabricItemSettings().group(ModItemGroup.TANZANITE)));
+    public static final Item IRADIUM_CRYSTAL = registerItem("iradium_crystal",
+            new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(TanzaniteExpansion.MOD_ID, name), item);
     }    

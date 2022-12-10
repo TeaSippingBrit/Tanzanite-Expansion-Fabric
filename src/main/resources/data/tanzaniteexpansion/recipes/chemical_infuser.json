@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "121",
+        "232",
+        "121"
+    ],
+    "key": {
+      "1": {
+        "item": "minecraft:redstone_dust"
+      },
+      "2": {
+        "item": "minecraft:diamond"
+      },
+      "3": {
+        "item": "minecraft:netherite_ingot"
+      }
+    },
+    "result": {
+        "item": "tanzaniteexpansion:chemical_infuser"
+    }
+}

@@ -5,6 +5,7 @@ import net.fabricmc.tanzanite.block.ModBlocks;
 import net.fabricmc.tanzanite.block.entity.ModBlockEntities;
 import net.fabricmc.tanzanite.fluid.ModFluids;
 import net.fabricmc.tanzanite.item.ModItems;
+import net.fabricmc.tanzanite.recipe.ModRecipes;
 import net.fabricmc.tanzanite.screen.ModScreenHandlers;
 import net.fabricmc.tanzanite.util.ModLootTableModifiers;
 import net.fabricmc.tanzanite.world.feature.ModConfiguredFeatures;
@@ -26,5 +27,6 @@ public class TanzaniteExpansion implements ModInitializer {
 		ModOreGeneration.generateOres();
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerAllScreenHandlers();
+		ModRecipes.registerRecipes();
 	}
 }

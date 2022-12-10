@@ -23,6 +23,7 @@ public class ModBlocks {
     public static final Block DEEPSLATE_TANZANITE_ORE = registerBlock("deepslate_tanzanite_ore", new OreBlock(FabricBlockSettings.of(Material.METAL).strength(4.5f, 3f).requiresTool(),UniformIntProvider.create(3,7)), ModItemGroup.TANZANITE);
     public static final Block POLYDENUM_BLOCK = registerBlock("polydenum_block", new Block(FabricBlockSettings.of(Material.METAL).strength(3).requiresTool()), ModItemGroup.TANZANITE);
     public static final Block POLYDENUM_CROP = registerBlockWithoutItem("polydenum_crop", new PolydenumCropBlock(FabricBlockSettings.copy(Blocks.WHEAT)));
+    public static final Block IRADIUM_BLOCK = registerBlock("iradium_block", new Block(FabricBlockSettings.of(Material.METAL).strength(3).requiresTool()), ModItemGroup.TANZANITE);
     public static final Block CHEMICAL_INFUSER = registerBlock("chemical_infuser", new ChemicalInfuserBlock(FabricBlockSettings.of(Material.METAL).strength(3).requiresTool().nonOpaque()), ModItemGroup.TANZANITE);
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
