@@ -6,6 +6,9 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.tanzanite.block.ModBlocks;
 import net.fabricmc.tanzanite.fluid.ModFluids;
+import net.fabricmc.tanzanite.screen.ChemicalInfuserScreen;
+import net.fabricmc.tanzanite.screen.ModScreenHandlers;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
@@ -22,5 +25,7 @@ public class TanzaniteExpansionClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
                 ModFluids.STILL_LIQUID_TANZANITE, ModFluids.FLOWING_LIQUID_TANZANITE);
+
+        HandledScreens.register(ModScreenHandlers.CHEMICAL_INFUSER_SCREEN_HANDLER, ChemicalInfuserScreen::new);
     }
 }
