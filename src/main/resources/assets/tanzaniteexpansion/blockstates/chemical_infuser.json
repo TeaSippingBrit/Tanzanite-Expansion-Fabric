@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "tanzaniteexpansion:block/chemical_infuser"
+        },
+        "facing=south": {
+            "model": "tanzaniteexpansion:block/chemical_infuser",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "tanzaniteexpansion:block/chemical_infuser",
+            "y": 270
+        },
+        "facing=east": {
+            "model": "tanzaniteexpansion:block/chemical_infuser",
+            "y": 90
+        }
+    }
+}
